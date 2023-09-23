@@ -118,6 +118,7 @@ class Histogram():
       return fig
 f = Histogram()
 st.pyplot(f.draw_histogram(cancer_df))
+cancer_df[['radius_mean','texture_mean','concavity_mean','symmetry_se','diagnosis']] = cancer_df.apply(lambda r: ['radius_mean','texture_mean','concavity_mean','symmetry_se','diagnosis'], axis=1, result_type="expand")
 df_new=cancer_df[['radius_mean','texture_mean','concavity_mean','symmetry_se','diagnosis']]
 st.title('Pair plot')
 st.pyplot(sns.pairplot(df_new, hue="diagnosis"))
