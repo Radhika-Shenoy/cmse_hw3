@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st 
 import plotly as plt
-diabetes_df = pd.read_csv('/Users/radhikavittalshenoy/Downloads/diabetes.csv')
+diabetes_df = pd.read_csv('diabetes.csv')
 st.title("Diabetes dataset")
 import matplotlib.pyplot as plt
 st.header('Histogram')
@@ -55,7 +55,7 @@ st.pyplot(sns.boxplot(x='Pregnancies',y='Age',hue='Outcome',data=diabetes_df).fi
 st.title("Student Performance dataset")
 
 
-student_df = pd.read_csv('/Users/radhikavittalshenoy/Downloads/student_data.csv')
+student_df = pd.read_csv('student_data.csv')
 student_df.head(10)
 
 st.header('Histogram')
@@ -107,7 +107,7 @@ st.pyplot(sns.boxplot(x='freetime',y='traveltime',hue='age',data=student_df).fig
 st.title("Breast Cancer Dataset")
 
 import pandas as pd
-cancer_df = pd.read_csv('/Users/radhikavittalshenoy/Documents/data.csv')
+cancer_df = pd.read_csv('data.csv')
 st.header('Histogram')
 class Histogram():
     def draw_histogram(self,data=None):
