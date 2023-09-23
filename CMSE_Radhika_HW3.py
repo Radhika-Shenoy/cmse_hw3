@@ -111,7 +111,7 @@ cancer_df = pd.read_csv('data.csv')
 st.header('Histogram')
 class Histogram():
     def draw_histogram(self,data=None):
-      fig = plt.figure(figsize=(10,6)); ax = fig.gca()
+      fig = plt.figure(figsize=(25,15)); ax = fig.gca()
       cancer_df.hist(bins=30, ax=ax)
       plt.suptitle('Breast Cancer', y=1.03)    # this adds a "super" title and places it well
       plt.tight_layout()
