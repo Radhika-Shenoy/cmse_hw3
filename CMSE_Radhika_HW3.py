@@ -119,9 +119,9 @@ class Histogram():
 f = Histogram()
 st.pyplot(f.draw_histogram(cancer_df))
 
-df_new=cancer_df.loc[["radius_mean","texture_mean","concavity_mean","symmetry_se","diagnosis"]]
+df_new1=cancer_df.iloc[:,2:6]
 st.title('Pair plot')
-st.pyplot(sns.pairplot(df_new, hue="diagnosis"))
+st.pyplot(sns.pairplot(df_new1, hue="diagnosis"))
 
 st.title('Relationship plot')
 st.pyplot(sns.relplot(data=cancer_df, x="area_mean", y="radius_mean", hue="diagnosis").figure)
